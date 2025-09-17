@@ -1,24 +1,38 @@
 body {
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f2f5;
-}
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 全体を中央揃え */
+            padding: 20px;
+        }
 
-h1 {
-    color: #1c1e21;
-}
+        /* メインタイトルのスタイル */
+        .main-title {
+            font-size: 2.5rem; /* 文字サイズ */
+            margin-bottom: 40px; /* タイトルとカードの間の余白 */
+        }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: none;
-    background-color: #1877f2;
-    color: white;
-    cursor: pointer;
-}
+        /* カード全体を囲むコンテナのスタイル */
+        .card-container {
+            display: flex; /* Flexboxを有効化 */
+            flex-wrap: wrap; /* 画面幅に応じてカードを折り返す */
+            justify-content: center; /* カードを中央に寄せる */
+            gap: 30px; /* カード間の隙間 */
+            max-width: 1200px; /* コンテナの最大幅 */
+        }
+
+        /* 個別のカードのスタイル */
+        .card {
+            border: 1px solid #ccc; /* 枠線 */
+            padding: 20px;
+            width: 280px; /* カードの横幅 */
+            min-height: 200px; /* カードの最小の高さ */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ちょっとした影 */
+            border-radius: 8px; /* 角を少し丸くする */
+        }
+
+        /* カード内のテキストスタイル */
+        .card p {
+            margin: 0 0 10px 0; /* テキスト行間の余白 */
+            line-height: 1.6; /* 行の高さ */
+        }
