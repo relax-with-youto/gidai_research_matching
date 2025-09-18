@@ -12,51 +12,70 @@
 
     <div class="card-container">
 
-        <div class="card">
-            <p><span class="theme-text">オンライン会議場面における口話を使わないろう・難聴者の発言</span></p>
-            <p>2024年度 卒業研究</p>
-            <p>所属学科 : 産業情報学科</p>
-            <p>名前 : にんじんくん</p>
-            <p>指導教授 : chiemi</p>
+    <div class="card" data-title="オンライン会議場面における口話を使わないろう・難聴者の発言"
+        data-content="この研究では、オンライン会議で口話を使わないろう・難聴者の発言の特徴を調査しました。"
+        data-video="videos/sample1.mp4">
+        <p><span class="theme-text">オンライン会議場面における口話を使わないろう・難聴者の発言</span></p>
+        <p>2024年度 卒業研究</p>
+        <p>所属学科 : 産業情報学科</p>
+        <p>名前 : にんじんくん</p>
+        <p>指導教授 : chiemi</p>
+    </div>
+
+    <div class="card" data-title="コンピュータによる顔の表情認識とその応用に関する基礎的検討"
+        data-content="カメラで撮影した画像から、コンピュータで、口の領域全体の大きさや特徴を読み取って、「笑顔認識」や「微笑み」認識ができるかどうか試作しました。"
+        data-video="videos/sample1.mp4">
+        <p><span class="theme-text">コンピュータによる顔の表情認識とその応用に関する基礎的検討</span></p>
+        <img src="images/田中先生.jpg" alt="田中先生の写真" class="student-photo">
+        <p>2011年度 卒業研究</p>
+        <p>所属学科 : 産業情報学科 コンピュータ科学コース</p>
+        <p>名前：田中陽土</p>
+        <p>指導教授：岡崎彰夫</p>
+    </div>
+
+    <div class="card" data-title="新しい研究テーマ"
+        data-content=""
+        data-video="videos/sample1.mp4">
+        <p><span class="theme-text">新しい研究テーマ</span></p>
+        <img src="images/山田さん.png" alt="山田さんの写真" class="student-photo">
+        <p>20xx年度 卒業研究</p>
+        <p>所属学科 : </p>
+        <p>名前：山田太郎</p>
+        <p>指導教授：佐藤良子</p>
+    </div>
+
+    <div class="card" data-title="テレビ及び映画におけるバリアフリー字幕制作⽀援に関する研究"
+        data-content=""
+        data-video="videos/sample1.mp4">
+        <p><span class="theme-text">テレビ及び映画におけるバリアフリー字幕制作⽀援に関する研究</span></p>
+        <img src="images/山田輝和.png" alt="山田輝和の写真" class="student-photo">
+        <p>2025年度 卒業研究</p>
+        <p>所属学科 : 産業情報学科</p>
+        <p>名前：山田輝和</p>
+        <p>指導教授：渡辺知恵美 若月大輔</p>
+    </div>
+
+    <div class="card" data-title="難聴者の雑談における会話参加支援に関するアクセシビリティ研究"
+        data-content=""
+        data-video="videos/sample1.mp4">
+        <p><span class="theme-text">難聴者の雑談における会話参加支援に関するアクセシビリティ研究</span></p>
+        <img src="images/石濱日菜.png" alt="石濱日菜の写真" class="student-photo">
+        <p>2025年度 卒業研究</p>
+        <p>所属学科 : 産業情報学科</p>
+        <p>名前：石濱日菜</p>
+        <p>指導教授：菊池浩平</p>
+    </div>
+
+        <!-- ポップアップ用オーバーレイ -->
+        <div id="overlay" class="overlay">
+            <div class="popup">
+                <span id="closeBtn">&times;</span>
+                <h2 id="popupTitle"></h2>
+                <p id="popupContent"></p>
+                <video id="popupVideo" controls style="width:100%; display:none;"></video>
+            </div>
         </div>
 
-        <div class="card">
-            <p><span class="theme-text">コンピュータによる顔の表情認識とその応用に関する基礎的検討</span></p>
-            <img src="images/田中先生.jpg" alt="田中先生の写真" class="student-photo">
-            <p>2011年度 卒業研究</p>
-            <p>所属学科 : 産業情報学科 コンピュータ科学コース</p>
-            <p>名前：田中陽土</p>
-            <p>指導教授：岡崎彰夫</p>
-        </div>
-
-        <div class="card">
-            <p><span class="theme-text">新しい研究テーマ</span></p>
-            <img src="images/山田さん.png" alt="山田さんの写真" class="student-photo">
-            <p>20xx年度 卒業研究</p>
-            <p>所属学科 : </p>
-            <p>名前：山田太郎</p>
-            <p>指導教授：佐藤良子</p>
-        </div>
-
-        <div class="card">
-            <p><span class="theme-text">テレビ及び映画におけるバリアフリー字幕制作⽀援に関する研究</span></p>
-            <img src="images/山田輝和.png" alt="山田輝和の写真" class="student-photo">
-            <p>2025年度 卒業研究</p>
-            <p>所属学科 : 産業情報学科</p>
-            <p>名前：山田輝和</p>
-            <p>指導教授：渡辺知恵美 若月大輔</p>
-        </div>
-
-        <div class="card">
-            <p><span class="theme-text">難聴者の雑談における会話参加支援に関するアクセシビリティ研究</span></p>
-            <img src="images/石濱日菜.png" alt="石濱日菜の写真" class="student-photo">
-            <p>2025年度 卒業研究</p>
-            <p>所属学科 : 産業情報学科</p>
-            <p>名前：石濱日菜</p>
-            <p>指導教授：菊池浩平</p>
-        </div>
-
-
-
+    <script src="script.js"></script>
 </body>
 </html>
