@@ -18,7 +18,7 @@ body {
             flex-wrap: wrap; /* 画面幅に応じてカードを折り返す */
             justify-content: center; /* カードを中央に寄せる */
             gap: 30px; /* カード間の隙間 */
-            max-width: 1200px; /* コンテナの最大幅 */
+            max-width: 1500px; /* コンテナの最大幅 */
         }
 
         /* 個別のカードのスタイル */
@@ -36,3 +36,17 @@ body {
             margin: 0 0 10px 0; /* テキスト行間の余白 */
             line-height: 1.6; /* 行の高さ */
         }
+
+        /* 生徒写真のスタイル */
+        .student-photo {
+            width: 100%; /* カード幅に合わせる */
+            height: auto; /* アスペクト比を保持 */
+            margin-top: 10px; /* 上のテキストとの余白 */
+            border-radius: 4px; /* 少し角を丸く */
+            object-fit: cover; /* はみ出さずに収める */
+        }
+
+.theme-text {
+    font-size: 1.1em;
+    font-weight: bold;
+}
