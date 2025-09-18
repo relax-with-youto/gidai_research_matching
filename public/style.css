@@ -50,3 +50,64 @@ body {
     font-size: 1.1em;
     font-weight: bold;
 }
+
+/* カードにマウスオーバー */
+.card:hover {
+    background-color: rgba(173, 216, 230, 0.3); /* 薄い青 */
+    cursor: pointer;
+}
+
+/* カードクリック時の黄色 */
+.card.active {
+    background-color: yellow;
+}
+
+/* ポップアップ用オーバーレイ */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    opacity: 0;           /* 初期は透明 */
+    pointer-events: none; /* 非表示状態でクリック無効 */
+    transition: opacity 0.3s ease; /* フェード用トランジション */
+}
+
+/* 表示状態 */
+.overlay.show {
+    opacity: 1;
+    pointer-events: auto; /* クリック可能に */
+}
+
+/* ポップアップの内容 */
+.popup {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+
+    transform: translateY(-20px); /* 上から少し下にスライド */
+    transition: transform 0.3s ease;
+}
+
+.overlay.show .popup {
+    transform: translateY(0); /* 正位置に */
+}
+/* 閉じるボタン */
+#closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}

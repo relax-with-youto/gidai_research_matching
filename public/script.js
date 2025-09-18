@@ -1,7 +1,49 @@
-console.log("Hello World from JavaScript Console!");
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('closeBtn');
 
-const helloButton = document.getElementById('helloButton');
+    const popupTitle = document.getElementById('popupTitle');
+    const popupContent = document.getElementById('popupContent');
+    const popupVideo = document.getElementById('popupVideo');
 
-helloButton.addEventListener('click', () => {
-    alert('Hello World!');
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            // クラスの切り替え
+            cards.forEach(c => c.classList.remove('active'));
+            card.classList.add('active');
+
+            // データ属性から内容を取得
+            const title = card.getAttribute('data-title');
+            const content = card.getAttribute('data-content');
+            const video = card.getAttribute('data-video');
+
+            popupTitle.textContent = title;
+            popupContent.textContent = content;
+
+            if(video) {
+                popupVideo.src = video;
+                popupVideo.style.display = 'block';
+            } else {
+                popupVideo.src = '';
+                popupVideo.style.display = 'none';
+            }
+
+            overlay.classList.add('show');
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('show');
+        cards.forEach(c => c.classList.remove('active'));
+        popupVideo.pause(); // 動画停止
+    });
+
+    overlay.addEventListener('click', (e) => {
+        if(e.target === overlay) {
+            overlay.classList.remove('show');
+            cards.forEach(c => c.classList.remove('active'));
+            popupVideo.pause();
+        }
+    });
 });
