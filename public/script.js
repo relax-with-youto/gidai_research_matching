@@ -24,6 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if(video) {
                 popupVideo.src = video;
                 popupVideo.style.display = 'block';
+                popupVideo.load();  // 動画をロード
+                popupVideo.play().catch(() => {
+                    // 自動再生がブラウザでブロックされた場合の処理
+                    console.log('自動再生がブロックされました');
+                });
             } else {
                 popupVideo.src = '';
                 popupVideo.style.display = 'none';
@@ -37,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.remove('show');
         cards.forEach(c => c.classList.remove('active'));
         popupVideo.pause(); // 動画停止
+        popupVideo.currentTime = 0; // 再生位置を先頭に戻す
     });
 
     overlay.addEventListener('click', (e) => {
@@ -44,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay.classList.remove('show');
             cards.forEach(c => c.classList.remove('active'));
             popupVideo.pause();
+            popupVideo.currentTime = 0;
         }
     });
 });
