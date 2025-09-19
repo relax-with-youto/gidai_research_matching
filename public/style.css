@@ -91,7 +91,7 @@ body {
     background-color: white;
     padding: 30px;
     border-radius: 10px;
-    width: 400px;
+    width: 800px;
     max-width: 90%;
     position: relative;
 
@@ -110,4 +110,10 @@ body {
     font-size: 25px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.tags {
+    cursor: pointer;
+    color: bule;
+    text-decoration: underline;
 }

@@ -54,3 +54,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.querySelectorAll('.tags').forEach(tagEl => {
+    tagEl.addEventListener('click', () => {
+        event.stopPropagation();
+        const clickedTag = tagEl.textContent.trim();
+        document.querySelectorAll('.card').forEach(card => {
+            const tags = card.getAttribute('data-tags');
+            if (tags && tags.split(',').map(t => t.trim()).includes(clickedTag)) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+document.getElementById('showAll').addEventListener('click', () => {
+    document.querySelectorAll('.card').forEach(card => {
+        card.style.display = '';
+    });
+});
