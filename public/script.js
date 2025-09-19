@@ -67,6 +67,9 @@ document.querySelectorAll('.tags').forEach(tagEl => {
                 card.style.display = 'none';
             }
         });
+
+        // フィルターしたら「すべて表示」ボタンを表示
+        document.getElementById('showAll').style.display = 'inline-block';
     });
 });
 
@@ -74,4 +77,8 @@ document.getElementById('showAll').addEventListener('click', () => {
     document.querySelectorAll('.card').forEach(card => {
         card.style.display = '';
     });
+
+    // ボタンは再び非表示
+    document.getElementById('showAll').style.display = 'none';
 });
+
