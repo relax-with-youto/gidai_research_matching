@@ -26,7 +26,7 @@
 
     <div class="card" data-title="コンピュータによる顔の表情認識とその応用に関する基礎的検討"
         data-content="単純に感情とは何か知りたくて、先生に疑問をぶつけてみたら、いつの間にか流れでやってみることにした。"
-        data-video="video/田中先生.mov"
+        data-video="https://drive.google.com/file/d/1m6MhM5KE8mi0w1WoVHT_JeQ3VTXlPd5y/preview?usp=drivesdk"
         data-tags="技術方式">
         <p><span class="theme-text">コンピュータによる顔の表情認識とその応用に関する基礎的検討</span></p>
         <img src="images/田中先生.jpg" alt="田中先生の写真" class="student-photo">
@@ -82,7 +82,10 @@
                 <span id="closeBtn">&times;</span>
                 <h2 id="popupTitle"></h2>
                 <p id="popupContent"></p>
-                <video id="popupVideo" controls style="width:100%; display:none;"></video>
+                <!-- <video id="popupVideo" controls style="width:100%; display:none;"></video> -->
+                <div class="video-wrapper">
+                    <iframe id="popupVideo" src="" controls style="width:100%; display:none;"></iframe>
+                </div>
             </div>
         </div>
 
